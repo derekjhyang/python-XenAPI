@@ -44,6 +44,8 @@
 # OF THIS SOFTWARE.
 # --------------------------------------------------------------------
 
+#!/usr/bin/env python
+
 import gettext
 import xmlrpclib
 import httplib
