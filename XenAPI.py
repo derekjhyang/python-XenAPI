@@ -177,12 +177,16 @@ class Session(xmlrpclib.ServerProxy):
         return "%s.%s"%(major,minor)
 
     def __getattr__(self, name):
+        # handle
         if name == 'handle':
             return self._session
+        # xenapi
         elif name == 'xenapi':
             return _Dispatcher(self.API_version, self.xenapi_request, None)
+        # login or slave_local
         elif name.startswith('login') or name.startswith('slave_local'):
             return lambda *params: self._login(name, params)
+        # xmlrpc
         else:
             return xmlrpclib.ServerProxy.__getattr__(self, name)
 
