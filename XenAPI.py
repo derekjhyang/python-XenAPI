@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 #============================================================================
 # This library is free software; you can redistribute it and/or
 # modify it under the terms of version 2.1 of the GNU Lesser General Public
@@ -44,7 +46,6 @@
 # OF THIS SOFTWARE.
 # --------------------------------------------------------------------
 
-#!/usr/bin/env python
 
 import gettext
 import xmlrpclib
